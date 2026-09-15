@@ -1,0 +1,167 @@
+
+<div class="min-h-screen bg-slate-100 flex items-center justify-center px-4 py-8">
+
+    <div class="w-full max-w-md">
+
+        <mat-card class="!rounded-2xl !p-6 sm:!p-8 !shadow-xl">
+
+            <div class="text-center mb-8">
+
+                <h1 class="text-3xl sm:text-4xl font-bold text-slate-800">
+                    Criar conta
+                </h1>
+
+                <p class="mt-2 text-sm sm:text-base text-slate-500">
+                    Crie sua conta e acesse aos beneficios
+                </p>
+
+            </div>
+
+            <form #formulario="ngForm" (ngSubmit)="cadastrar(formulario)">
+
+                <mat-form-field appearance="outline" class="w-full mb-3">
+
+                    <mat-label>Nome</mat-label>
+
+                    <input 
+                        type="text" 
+                        name="nome"
+                        matInput 
+                        required
+                        minlength="3"
+                        placeholder="Digite seu nome" 
+                        [(ngModel)]="dados.nome" 
+                        #campoNome="ngModel" 
+                    >
+
+                    @if (campoNome.invalid && campoNome.dirty) {
+                        <mat-error>
+                            Digite seu nome
+                        </mat-error>
+                    }
+
+                </mat-form-field>
+
+
+                <mat-form-field appearance="outline" class="w-full mb-3">
+
+                    <mat-label>Email</mat-label>
+
+                    <input 
+                        type="email" 
+                        name="email"
+                        required 
+                        matInput 
+                        #campoEmail="ngModel"
+                        placeholder="Digite seu email" 
+                        [(ngModel)]="dados.email" 
+                        name="email"
+                    >
+
+                    @if (campoEmail.invalid && campoEmail.dirty) {
+
+                    <mat-error>
+                        Digite um email válido
+                    </mat-error>
+
+                    }
+
+                </mat-form-field>
+
+
+                <mat-form-field appearance="outline" class="w-full mb-3">
+
+                    <mat-label>Senha</mat-label>
+
+                    <input 
+                        type="password" 
+                        name="senha" 
+                        matInput 
+                        required
+                        minlength="6"
+                        placeholder="Digite sua senha" 
+                        [(ngModel)]="dados.senha"
+                        #campoSenha="ngModel" 
+                    >
+
+                    @if (campoSenha.invalid && campoSenha.dirty) {
+
+                    <mat-error>
+                        A senha deve ter pelo menos 6 caracteres
+                    </mat-error>
+
+                    }
+
+                </mat-form-field>
+
+
+                <mat-form-field appearance="outline" class="w-full mb-2">
+
+                    <mat-label>Confirmar senha</mat-label>
+
+                    <input 
+                        type="password" 
+                        name="confirmarSenha"
+                        matInput 
+                        required
+                        placeholder="Confirme sua senha" 
+                        [(ngModel)]="dados.confirmarSenha"
+                        #campoConfirmarSenha="ngModel" 
+                    >
+
+                    @if (
+                        campoConfirmarSenha.dirty &&
+                        dados.senha !== dados.confirmarSenha
+                    ) {
+
+                    <mat-error>
+                        As senhas não coincidem
+                    </mat-error>
+
+                    }
+
+                </mat-form-field>
+
+                <button 
+                    matButton="filled" 
+                    type="submit" 
+                    class="!w-full !min-h-12 !text-base !mt-4"
+                    [disabled]="formulario.invalid || dados.senha !== dados.confirmarSenha"
+                >
+                    Criar conta
+                </button>
+
+            </form>
+
+
+            <div class="flex items-center gap-3 my-7">
+
+                <div class="h-px flex-1 bg-slate-200"></div>
+
+                <span class="text-sm text-slate-400">
+                    ou
+                </span>
+
+                <div class="h-px flex-1 bg-slate-200"></div>
+
+            </div>
+
+
+            <div class="text-center">
+
+                <p class="text-sm text-slate-500">
+                    Já possui uma conta?
+                </p>
+
+                <a routerLink="/login"
+                    class="inline-block mt-2 text-sm font-semibold text-blue-600 hover:text-blue-800 hover:underline transition">
+                    Entrar na minha conta
+                </a>
+
+            </div>
+
+        </mat-card>
+
+    </div>
+
+</div>

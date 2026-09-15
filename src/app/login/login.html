@@ -1,23 +1,98 @@
-<h1>Login</h1>
 
-<form>
-    <mat-form-field class="example-full-width">
-        <mat-label>Email</mat-label>
-        <input type="email" matInput placeholder="Ex. pat@example.com">
-    </mat-form-field>
+<div class="min-h-screen bg-slate-100 flex items-center justify-center px-4 py-8">
 
-    <br>
+    <div class="w-full max-w-md">
 
-    <mat-form-field class="example-full-width">
-        <mat-label>Senha</mat-label>
-        <input type="password" matInput placeholder="Ex. Digite sua senha">
-    </mat-form-field>
+        <mat-card class="!rounded-2xl !p-6 sm:!p-8 !shadow-xl">
 
-    <br>
+            <div class="text-center mb-8">
 
-     <div class="example-button-row">
-        <button matButton="filled">Entrar</button>
+                <h1 class="text-3xl sm:text-4xl font-bold text-slate-800">
+                    Login
+                </h1>
+
+                <p class="mt-2 text-sm sm:text-base text-slate-500">
+                    Entre na sua conta para continuar
+                </p>
+
+            </div>
+
+
+            <form>
+
+                <mat-form-field appearance="outline" class="w-full mb-3">
+
+                    <mat-label>Email</mat-label>
+
+                    <input 
+                        type="email" 
+                        matInput 
+                        placeholder="Digite seu email"
+                    >
+
+                </mat-form-field>
+
+                <mat-form-field appearance="outline" class="w-full mb-2">
+
+                    <mat-label>Senha</mat-label>
+
+                    <input 
+                        type="password" 
+                        matInput 
+                        placeholder="Digite sua senha"
+                    >
+
+                </mat-form-field>
+
+
+                <div class="flex justify-end mb-6">
+
+                    <a routerLink="/recuperar-senha"
+                        class="text-sm font-medium text-blue-600 hover:text-blue-800 hover:underline transition">
+                        Esqueci minha senha
+                    </a>
+
+                </div>
+
+                <button 
+                    matButton="filled" 
+                    type="submit" 
+                    class="!w-full !min-h-12 !text-base"
+                >
+                    Entrar
+                </button>
+
+            </form>
+
+
+            <div class="flex items-center gap-3 my-7">
+
+                <div class="h-px flex-1 bg-slate-200"></div>
+
+                <span class="text-sm text-slate-400">
+                    ou
+                </span>
+
+                <div class="h-px flex-1 bg-slate-200"></div>
+
+            </div>
+
+
+            <div class="text-center">
+
+                <p class="text-sm text-slate-500">
+                    Ainda não possui uma conta?
+                </p>
+
+                <a routerLink="/cadastro"
+                    class="inline-block mt-2 text-sm font-semibold text-blue-600 hover:text-blue-800 hover:underline transition">
+                    Criar uma conta
+                </a>
+
+            </div>
+
+        </mat-card>
+
     </div>
-</form>
 
-   
+</div>

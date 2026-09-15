@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
-
-import { FormsModule } from '@angular/forms';
+import { FormsModule, NgForm } from '@angular/forms';
 
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
@@ -10,18 +9,37 @@ import { MatCardModule } from '@angular/material/card';
 import { RouterLink } from '@angular/router';
 
 @Component({
-  selector: 'app-login',
+  selector: 'app-cadastro',
   imports: [
     FormsModule,
-    MatFormFieldModule,
     MatInputModule,
+    MatFormFieldModule,
     MatButtonModule,
     MatCardModule,
     RouterLink
   ],
-  templateUrl: './login.html',
-  styleUrl: './login.css',
+  templateUrl: './cadastro.html',
+  styleUrl: './cadastro.css',
 })
-export class Login {
+export class Cadastro {
+
+  dados = {
+    nome: '',
+    email: '',
+    senha: '',
+    confirmarSenha: ''
+  };
+
+  cadastrar(formulario: NgForm) {
+
+    if (formulario.invalid) {
+      return;
+    }
+
+    if (this.dados.senha !== this.dados.confirmarSenha) {
+      return;
+    }
+
+  }
 
 }
