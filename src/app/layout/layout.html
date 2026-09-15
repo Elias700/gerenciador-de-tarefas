@@ -1,0 +1,151 @@
+<mat-sidenav-container class="min-h-screen !bg-slate-100">
+
+    <!-- SIDEBAR -->
+    <mat-sidenav #sidenav [mode]="isMobileOrTablet ? 'over' : 'side'" [opened]="!isMobileOrTablet"
+        class="!w-64 !bg-white !border-r !border-slate-200">
+
+        <div class="h-16 flex items-center px-6 border-b border-slate-200">
+
+            <a routerLink="/dashboard" (click)="fecharMenu()" class="text-xl font-bold text-slate-900">
+                Meu Plantão
+            </a>
+
+        </div>
+
+
+        <!-- MENU -->
+        <mat-nav-list class="!p-3">
+
+            <a mat-list-item routerLink="/dashboard" routerLinkActive="!bg-blue-50 !text-blue-700"
+                [routerLinkActiveOptions]="{ exact: true }" (click)="fecharMenu()">
+
+                <mat-icon matListItemIcon>
+                    dashboard
+                </mat-icon>
+
+                <span matListItemTitle>
+                    Dashboard
+                </span>
+
+            </a>
+
+
+            <!-- Adicionar plantão -->
+            <a mat-list-item routerLink="/plantao/adicionar" routerLinkActive="!bg-blue-50 !text-blue-700"
+                (click)="fecharMenu()">
+
+                <mat-icon matListItemIcon>
+                    add_circle
+                </mat-icon>
+
+                <span matListItemTitle>
+                    Adicionar plantão
+                </span>
+
+            </a>
+
+
+            <!-- Histórico -->
+            <a mat-list-item routerLink="/historico" routerLinkActive="!bg-blue-50 !text-blue-700"
+                (click)="fecharMenu()">
+
+                <mat-icon matListItemIcon>
+                    history
+                </mat-icon>
+
+                <span matListItemTitle>
+                    Histórico
+                </span>
+
+            </a>
+
+
+            <!-- Configurações -->
+            <a mat-list-item routerLink="/configuracoes" routerLinkActive="!bg-blue-50 !text-blue-700"
+                (click)="fecharMenu()">
+
+                <mat-icon matListItemIcon>
+                    settings
+                </mat-icon>
+
+                <span matListItemTitle>
+                    Configurações
+                </span>
+
+            </a>
+
+        </mat-nav-list>
+
+
+        <!-- SAIR -->
+        <div class="absolute bottom-0 left-0 w-full p-3">
+
+            <button mat-button class="!w-full !justify-start !text-red-600">
+
+                <mat-icon>
+                    logout
+                </mat-icon>
+
+                <span class="ml-2">
+                    Sair
+                </span>
+
+            </button>
+
+        </div>
+
+    </mat-sidenav>
+
+
+    <!-- CONTEÚDO -->
+    <mat-sidenav-content>
+
+        <!-- HEADER -->
+        <mat-toolbar class="!h-16 !bg-white !border-b !border-slate-200 !shadow-sm !px-3 sm:!px-5 lg:!px-6">
+
+            <!-- HAMBÚRGUER -->
+            <button mat-icon-button (click)="abrirMenu()" aria-label="Abrir menu" class="!mr-2 xl:!hidden">
+
+                <mat-icon>
+                    menu
+                </mat-icon>
+
+            </button>
+
+
+            <!-- TÍTULO -->
+            <span class="text-lg sm:text-xl lg:text-2xl font-semibold text-slate-900">
+                Meu Plantão
+            </span>
+
+
+            <!-- ESPAÇO -->
+            <span class="flex-1"></span>
+
+
+            <!-- PERFIL -->
+            <a mat-icon-button routerLink="/perfil" matTooltip="Meu perfil" class="!text-slate-600">
+
+                <mat-icon>
+                    account_circle
+                </mat-icon>
+
+            </a>
+
+        </mat-toolbar>
+
+
+        <!-- CONTEÚDO -->
+        <main class="min-h-[calc(100vh-4rem)] bg-slate-100 px-3 py-4 sm:px-5 sm:py-6 lg:px-8 lg:py-8">
+
+            <div class="w-full max-w-[1920px] mx-auto">
+
+                <router-outlet></router-outlet>
+
+            </div>
+
+        </main>
+
+    </mat-sidenav-content>
+
+</mat-sidenav-container>

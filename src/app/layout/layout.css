@@ -1,0 +1,17 @@
+
+:host {
+  display: block;
+}
+
+mat-sidenav-container {
+  min-height: 100vh;
+}
+
+mat-sidenav {
+  border-right: 1px solid #e2e8f0;
+}
+
+mat-nav-list a {
+  margin-bottom: 4px;
+  border-radius: 8px;
+}

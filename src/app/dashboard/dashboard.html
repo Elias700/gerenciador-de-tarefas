@@ -1,0 +1,334 @@
+<div class="w-full space-y-5 sm:space-y-6">
+
+    <section class="flex flex-col gap-4 xl:flex-row xl:items-center xl:justify-between">
+
+        <div class="min-w-0">
+
+            <h1 class="text-2xl sm:text-3xl 2xl:text-4xl font-bold text-slate-900">
+                Dashboard
+            </h1>
+
+            <p class="mt-1 text-sm sm:text-base 2xl:text-lg text-slate-500">
+                Acompanhe seus plantões e seus ganhos.
+            </p>
+
+        </div>
+
+
+        <a matButton="filled" routerLink="/plantao/adicionar"
+            class="!w-full xl:!w-auto !bg-blue-600 !text-white hover:!bg-blue-700">
+
+            <mat-icon>
+                add
+            </mat-icon>
+
+            Adicionar plantão
+
+        </a>
+
+    </section>
+
+
+    <section class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-3 sm:gap-4 2xl:gap-5">
+
+        <mat-card class="!bg-white !rounded-2xl !shadow-sm !border !border-slate-200">
+
+            <mat-card-content class="!p-4 sm:!p-5 2xl:!p-6">
+
+                <div class="flex items-center justify-between gap-3">
+
+                    <div class="min-w-0">
+
+                        <p class="text-sm 2xl:text-base text-slate-500 truncate">
+                            Plantões realizados
+                        </p>
+
+                        <p class="mt-2 text-2xl 2xl:text-3xl font-bold text-slate-900">
+                            12
+                        </p>
+
+                    </div>
+
+
+                    <div
+                        class="w-10 h-10 sm:w-11 sm:h-11 2xl:w-12 2xl:h-12 rounded-full bg-blue-50 flex items-center justify-center shrink-0">
+
+                        <mat-icon class="!text-blue-600">
+                            medical_services
+                        </mat-icon>
+
+                    </div>
+
+                </div>
+
+            </mat-card-content>
+
+        </mat-card>
+
+
+        <mat-card class="!bg-white !rounded-2xl !shadow-sm !border !border-slate-200">
+
+            <mat-card-content class="!p-4 sm:!p-5 2xl:!p-6">
+
+                <div class="flex items-center justify-between gap-3">
+
+                    <div class="min-w-0">
+
+                        <p class="text-sm 2xl:text-base text-slate-500 truncate">
+                            Horas trabalhadas
+                        </p>
+
+                        <p class="mt-2 text-2xl 2xl:text-3xl font-bold text-slate-900">
+                            144h
+                        </p>
+
+                    </div>
+
+
+                    <div
+                        class="w-10 h-10 sm:w-11 sm:h-11 2xl:w-12 2xl:h-12 rounded-full bg-indigo-50 flex items-center justify-center shrink-0">
+
+                        <mat-icon class="!text-indigo-600">
+                            schedule
+                        </mat-icon>
+
+                    </div>
+
+                </div>
+
+            </mat-card-content>
+
+        </mat-card>
+
+
+        <mat-card class="!bg-white !rounded-2xl !shadow-sm !border !border-slate-200">
+
+            <mat-card-content class="!p-4 sm:!p-5 2xl:!p-6">
+
+                <div class="flex items-center justify-between gap-3">
+
+                    <div class="min-w-0">
+
+                        <p class="text-sm 2xl:text-base text-slate-500 truncate">
+                            A receber
+                        </p>
+
+                        <p class="mt-2 text-2xl 2xl:text-3xl font-bold text-slate-900">
+                            R$ 4.800,00
+                        </p>
+
+                    </div>
+
+
+                    <div
+                        class="w-10 h-10 sm:w-11 sm:h-11 2xl:w-12 2xl:h-12 rounded-full bg-amber-50 flex items-center justify-center shrink-0">
+
+                        <mat-icon class="!text-amber-600">
+                            payments
+                        </mat-icon>
+
+                    </div>
+
+                </div>
+
+            </mat-card-content>
+
+        </mat-card>
+
+
+        <mat-card class="!bg-white !rounded-2xl !shadow-sm !border !border-slate-200">
+
+            <mat-card-content class="!p-4 sm:!p-5 2xl:!p-6">
+
+                <div class="flex items-center justify-between gap-3">
+
+                    <div class="min-w-0">
+
+                        <p class="text-sm 2xl:text-base text-slate-500 truncate">
+                            Total recebido
+                        </p>
+
+                        <p class="mt-2 text-2xl 2xl:text-3xl font-bold text-slate-900">
+                            R$ 8.200,00
+                        </p>
+
+                    </div>
+
+
+                    <div
+                        class="w-10 h-10 sm:w-11 sm:h-11 2xl:w-12 2xl:h-12 rounded-full bg-emerald-50 flex items-center justify-center shrink-0">
+
+                        <mat-icon class="!text-emerald-600">
+                            account_balance_wallet
+                        </mat-icon>
+
+                    </div>
+
+                </div>
+
+            </mat-card-content>
+
+        </mat-card>
+
+    </section>
+
+
+    <mat-card class="!bg-white !rounded-2xl !shadow-sm !border !border-slate-200">
+
+        <mat-card-header class="!px-4 sm:!px-5 !pt-5">
+
+            <mat-card-title class="!text-lg sm:!text-xl !font-semibold !text-slate-900">
+                Próximos plantões
+            </mat-card-title>
+
+            <mat-card-subtitle class="!text-slate-500">
+                Seus próximos compromissos
+            </mat-card-subtitle>
+
+        </mat-card-header>
+
+
+        <mat-card-content class="!p-4 sm:!p-5">
+
+            <div
+                class="flex flex-col gap-4 xl:flex-row xl:items-center xl:justify-between rounded-xl bg-slate-50 border border-slate-100 p-4 sm:p-5">
+
+                <div class="flex items-center gap-3 sm:gap-4 min-w-0">
+
+                    <div
+                        class="w-10 h-10 sm:w-11 sm:h-11 rounded-full bg-blue-50 flex items-center justify-center shrink-0">
+
+                        <mat-icon class="!text-blue-600">
+                            local_hospital
+                        </mat-icon>
+
+                    </div>
+
+
+                    <div class="min-w-0">
+
+                        <h3 class="font-semibold text-slate-900 truncate">
+                            Hospital São João
+                        </h3>
+
+                        <p class="text-sm text-slate-500 mt-1">
+                            Plantão diurno
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="xl:text-right">
+
+                    <p class="font-semibold text-slate-900">
+                        20/09/2026
+                    </p>
+
+                    <p class="text-sm text-slate-500 mt-1">
+                        07:00 - 19:00
+                    </p>
+
+                </div>
+
+            </div>
+
+        </mat-card-content>
+
+
+        <mat-card-actions class="!px-4 sm:!px-5 !pb-5">
+
+            <a matButton routerLink="/historico" class="!text-blue-600">
+                Ver histórico
+            </a>
+
+        </mat-card-actions>
+
+    </mat-card>
+
+
+    <section class="grid grid-cols-1 xl:grid-cols-2 gap-4 2xl:gap-5">
+
+        <mat-card class="!bg-white !rounded-2xl !shadow-sm !border !border-slate-200">
+
+            <mat-card-content class="!p-5 sm:!p-6">
+
+                <div class="flex items-start gap-4">
+
+                    <div
+                        class="w-11 h-11 sm:w-12 sm:h-12 rounded-full bg-blue-50 flex items-center justify-center shrink-0">
+
+                        <mat-icon class="!text-blue-600">
+                            add_circle
+                        </mat-icon>
+
+                    </div>
+
+
+                    <div class="min-w-0">
+
+                        <h2 class="font-semibold text-slate-900">
+                            Adicionar plantão
+                        </h2>
+
+                        <p class="text-sm text-slate-500 mt-1">
+                            Registre um novo plantão.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <a matButton="outlined" routerLink="/plantao/adicionar" class="!mt-5 !border-blue-600 !text-blue-600">
+                    Adicionar
+                </a>
+
+            </mat-card-content>
+
+        </mat-card>
+
+
+        <mat-card class="!bg-white !rounded-2xl !shadow-sm !border !border-slate-200">
+
+            <mat-card-content class="!p-5 sm:!p-6">
+
+                <div class="flex items-start gap-4">
+
+                    <div
+                        class="w-11 h-11 sm:w-12 sm:h-12 rounded-full bg-slate-100 flex items-center justify-center shrink-0">
+
+                        <mat-icon class="!text-slate-600">
+                            history
+                        </mat-icon>
+
+                    </div>
+
+
+                    <div class="min-w-0">
+
+                        <h2 class="font-semibold text-slate-900">
+                            Histórico
+                        </h2>
+
+                        <p class="text-sm text-slate-500 mt-1">
+                            Consulte seus plantões anteriores.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <a matButton="outlined" routerLink="/historico" class="!mt-5 !border-slate-400 !text-slate-700">
+                    Ver histórico
+                </a>
+
+            </mat-card-content>
+
+        </mat-card>
+
+    </section>
+
+</div>
