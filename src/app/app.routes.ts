@@ -3,6 +3,7 @@ import { Login } from '../app/login/login'
 import { Cadastro } from './cadastro/cadastro';
 import { Layout } from './layout/layout';
 import { Dashboard } from './dashboard/dashboard';
+import { RecuperarSenha } from './recuperar-senha/recuperar-senha';
 
 export const routes: Routes = [
 
@@ -20,6 +21,11 @@ export const routes: Routes = [
     {
         path: 'cadastro',
         component: Cadastro
+    },
+
+    {
+        path: 'recuperar-senha', 
+        component: RecuperarSenha
     },
     
     {
