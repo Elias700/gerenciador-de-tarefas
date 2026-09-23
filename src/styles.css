@@ -1,3 +1,47 @@
-/* You can add global styles to this file, and also import other style files */
-
 @import 'tailwindcss';
+
+@theme {
+  --color-primary: #168a5b;
+  --color-primary-dark: #0f6845;
+  --color-primary-light: #ddf5ea;
+
+  --color-background: #f5f7f6;
+  --color-surface: #ffffff;
+
+  --color-text: #26332e;
+  --color-text-secondary: #66736d;
+
+  --color-border: #dde3e0;
+
+  --color-success: #16a36a;
+  --color-warning: #d99a24;
+  --color-error: #d64545;
+}
+
+/* ============================= */
+/* Angular Material Theme        */
+/* ============================= */
+
+html {
+  --mat-sys-primary: #168a5b;
+  --mat-sys-on-primary: #ffffff;
+
+  --mat-sys-primary-container: #ddf5ea;
+  --mat-sys-on-primary-container: #0f6845;
+
+  /* Superfícies */
+  --mat-sys-surface: #ffffff;
+  --mat-sys-surface-container: #ffffff;
+  --mat-sys-surface-container-low: #ffffff;
+  --mat-sys-surface-container-lowest: #ffffff;
+  --mat-sys-surface-container-high: #ffffff;
+  --mat-sys-surface-container-highest: #ffffff;
+
+  --mat-sys-on-surface: #26332e;
+  --mat-sys-on-surface-variant: #66736d;
+
+  --mat-sys-outline: #dde3e0;
+
+  --mat-sys-error: #d64545;
+  --mat-sys-on-error: #ffffff;
+}
