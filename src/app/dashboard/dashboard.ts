@@ -4,6 +4,7 @@ import { RouterLink } from '@angular/router';
 import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
+import { DashboardHeaderComponent } from './dashboard-header/dashboard-header.component';
 
 @Component({
   selector: 'app-dashboard',
@@ -11,8 +12,9 @@ import { MatIconModule } from '@angular/material/icon';
     RouterLink,
     MatCardModule,
     MatButtonModule,
-    MatIconModule
-  ],
+    MatIconModule,
+    DashboardHeaderComponent
+],
   templateUrl: './dashboard.html',
   styleUrl: './dashboard.css',
 })

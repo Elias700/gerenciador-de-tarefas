@@ -1,0 +1,25 @@
+<header class="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+    <!-- Saudação e Nome da Profissional -->
+    <div>
+        <p class="text-sm font-medium text-text-secondary">
+            {{ greeting() }}
+        </p>
+        <h1 class="text-2xl font-bold tracking-tight text-text sm:text-3xl">
+            {{ userName() }}
+        </h1>
+        <p class="mt-0.5 text-xs font-medium text-text-secondary sm:text-sm">
+            {{ userSpecialty() }}
+        </p>
+    </div>
+
+    <!-- Botão Ação Principal -->
+    <div>
+        <button type="button" (click)="onNewShift()"
+            class="inline-flex items-center justify-center gap-2 rounded-xl bg-primary px-4 py-2.5 text-sm font-semibold text-white shadow-sm transition-all duration-200 hover:bg-primary-dark focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 active:scale-[0.98]">
+            <svg class="h-4 w-4 stroke-[2.5]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
+            </svg>
+            <span>Novo Plantão</span>
+        </button>
+    </div>
+</header>
