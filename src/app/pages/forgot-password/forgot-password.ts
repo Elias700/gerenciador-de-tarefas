@@ -6,7 +6,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { RouterLink } from '@angular/router';
 
 @Component({
-  selector: 'app-recuperar-senha',
+  selector: 'app-forgot-password',
   imports: [ 
      RouterLink,
     MatCardModule,
@@ -14,7 +14,7 @@ import { RouterLink } from '@angular/router';
     MatInputModule,
     MatButtonModule
   ],
-  templateUrl: './recuperar-senha.html',
-  styleUrl: './recuperar-senha.css',
+  templateUrl: './forgot-password.html',
+  styleUrl: './forgot-password.css',
 })
-export class RecuperarSenha {}
+export class ForgotPassword {}

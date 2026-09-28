@@ -1,9 +1,9 @@
 import { Routes } from '@angular/router';
-import { Login } from '../app/login/login'
-import { Cadastro } from './cadastro/cadastro';
 import { Layout } from './layout/layout';
-import { Dashboard } from './dashboard/dashboard';
-import { RecuperarSenha } from './recuperar-senha/recuperar-senha';
+import { Login } from './pages/login/login';
+import { Dashboard } from './pages/dashboard/dashboard';
+import { Register } from './pages/register/register';
+import { ForgotPassword } from './pages/forgot-password/forgot-password';
 
 export const routes: Routes = [
 
@@ -19,13 +19,13 @@ export const routes: Routes = [
     },
 
     {
-        path: 'cadastro',
-        component: Cadastro
+        path: 'register',
+        component: Register
     },
 
     {
-        path: 'recuperar-senha', 
-        component: RecuperarSenha
+        path: 'forgot-password', 
+        component: ForgotPassword
     },
     
     {

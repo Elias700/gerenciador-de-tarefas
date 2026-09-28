@@ -9,7 +9,7 @@ import { MatCardModule } from '@angular/material/card';
 import { RouterLink } from '@angular/router';
 
 @Component({
-  selector: 'app-cadastro',
+  selector: 'app-register',
   imports: [
     FormsModule,
     MatInputModule,
@@ -18,10 +18,10 @@ import { RouterLink } from '@angular/router';
     MatCardModule,
     RouterLink
   ],
-  templateUrl: './cadastro.html',
-  styleUrl: './cadastro.css',
+  templateUrl: './register.html',
+  styleUrl: './register.css',
 })
-export class Cadastro {
+export class Register {
 
   dados = {
     nome: '',
