@@ -1,74 +1,203 @@
-<mat-sidenav-container class="min-h-screen !bg-slate-100">
+<mat-sidenav-container class="min-h-screen !bg-background">
 
     <!-- SIDEBAR -->
-    <mat-sidenav #sidenav [mode]="isMobileOrTablet ? 'over' : 'side'" [opened]="!isMobileOrTablet"
-        class="!w-64 !bg-white !border-r !border-slate-200">
 
-        <div class="h-16 flex items-center px-6 border-b border-slate-200">
+    <mat-sidenav 
+        #sidenav 
+        [mode]="isMobileOrTablet ? 'over' : 'side'" 
+        [opened]="!isMobileOrTablet" 
+        class="!w-[280px] !bg-sidebar !border-r !border-sidebar-border
+    ">
 
-            <a routerLink="/dashboard" (click)="fecharMenu()" class="text-xl font-bold text-slate-900">
-                Meu Plantão
+        <!-- LOGO -->
+
+        <div class="
+            flex h-[85px] items-center
+            border-b border-sidebar-border
+            px-6
+        ">
+
+            <a 
+                routerLink="/dashboard" 
+                (click)="fecharMenu()" 
+                class="flex items-center gap-3
+            ">
+
+                <!-- ÍCONE -->
+                <div class="
+                    flex h-10 w-10 shrink-0
+                    items-center justify-center
+                    rounded-xl
+                    bg-primary
+                    text-white
+                ">
+                    <mat-icon class="!m-0 !flex !items-center !justify-center">
+                        layers
+                    </mat-icon>
+                </div>
+
+                <!-- TEXTO -->
+                <div class="leading-tight">
+
+                    <p class="text-lg font-bold text-sidebar-text">
+                        Meu Plantão
+                    </p>
+
+                    <p class="mt-0.5 text-xs text-sidebar-muted">
+                        Gestão profissional
+                    </p>
+
+                </div>
+
             </a>
 
         </div>
 
+        <!-- PERFIL -->
 
+        <div class="px-4 pt-4">
+
+            <a 
+                routerLink="/perfil" 
+                (click)="fecharMenu()" 
+                class="
+                    flex items-center gap-3
+                    rounded-2xl
+                    border border-sidebar-border
+                    bg-sidebar-hover
+                    px-4 py-4
+                    transition-colors duration-200
+                    hover:bg-sidebar-border
+            ">
+
+                <!-- INICIAIS -->
+                <div class="
+                    flex h-10 w-10 shrink-0
+                    items-center justify-center
+                    rounded-xl
+                    bg-primary
+                    text-sm font-bold
+                    text-white
+                ">
+                    MS
+                </div>
+
+                <!-- DADOS -->
+                <div class="min-w-0">
+
+                    <p class="truncate text-sm font-bold text-white">
+                        Dra. Ana Sales
+                    </p>
+
+                    <p class="truncate text-xs text-sidebar-muted">
+                        Médica – CRM-SP 45821
+                    </p>
+
+                </div>
+
+            </a>
+
+        </div>
+        >
         <!-- MENU -->
-        <mat-nav-list class="!p-3">
 
-            <a mat-list-item routerLink="/dashboard" routerLinkActive="!bg-blue-50 !text-blue-700"
-                [routerLinkActiveOptions]="{ exact: true }" (click)="fecharMenu()">
+        <mat-nav-list class="!px-2 !py-4">
 
-                <mat-icon matListItemIcon>
+            <!-- DASHBOARD -->
+            <a 
+                mat-list-item 
+                routerLink="/dashboard" 
+                routerLinkActive="!bg-primary !text-white"
+                [routerLinkActiveOptions]="{ exact: true }" 
+                (click)="fecharMenu()" 
+                class="
+                    !mb-1
+                    !rounded-xl
+                    !text-sidebar-text
+                    hover:!bg-sidebar-hover
+                    hover:!text-white
+            ">
+
+                <mat-icon matListItemIcon class="!text-sidebar-text group-hover:!text-white">
                     dashboard
                 </mat-icon>
 
-                <span matListItemTitle>
+                <span matListItemTitle class="!font-semibold !text-sidebar-text">
                     Dashboard
                 </span>
 
             </a>
 
 
-            <!-- Adicionar plantão -->
-            <a mat-list-item routerLink="/plantao/adicionar" routerLinkActive="!bg-blue-50 !text-blue-700"
-                (click)="fecharMenu()">
+            <!-- NOVO PLANTÃO -->
+            <a 
+                mat-list-item 
+                routerLink="/plantao/adicionar" 
+                routerLinkActive="!bg-primary !text-white"
+                (click)="fecharMenu()" 
+                class="
+                    !mb-1
+                    !rounded-xl
+                    !text-sidebar-muted
+                    hover:!bg-sidebar-hover
+                    hover:!text-sidebar-text
+                ">
 
-                <mat-icon matListItemIcon>
-                    add_circle
+                <mat-icon matListItemIcon class="!text-sidebar-text group-hover:!text-white">
+                    add
                 </mat-icon>
 
-                <span matListItemTitle>
-                    Adicionar plantão
+                <span matListItemTitle class="!font-semibold !text-sidebar-text">
+                    Novo Plantão
                 </span>
 
             </a>
 
 
-            <!-- Histórico -->
-            <a mat-list-item routerLink="/historico" routerLinkActive="!bg-blue-50 !text-blue-700"
-                (click)="fecharMenu()">
+            <!-- HISTÓRICO -->
+            <a 
+                mat-list-item 
+                routerLink="/historico" 
+                routerLinkActive="!bg-primary !text-white" 
+                (click)="fecharMenu()"
+                class="
+                    !mb-1
+                    !rounded-xl
+                    !text-sidebar-muted
+                    hover:!bg-sidebar-hover
+                    hover:!text-sidebar-text
+            ">
 
-                <mat-icon matListItemIcon>
+                <mat-icon matListItemIcon class="!text-sidebar-text group-hover:!text-white">
                     history
                 </mat-icon>
 
-                <span matListItemTitle>
+                <span matListItemTitle class="!font-semibold !text-sidebar-text">
                     Histórico
                 </span>
 
             </a>
 
 
-            <!-- Configurações -->
-            <a mat-list-item routerLink="/configuracoes" routerLinkActive="!bg-blue-50 !text-blue-700"
-                (click)="fecharMenu()">
+            <!-- CONFIGURAÇÕES -->
+            <a 
+                mat-list-item 
+                routerLink="/configuracoes" 
+                routerLinkActive="!bg-primary !text-white"
+                (click)="fecharMenu()" 
+                class="
+                    !mb-1
+                    !rounded-xl
+                    !text-sidebar-muted
+                    hover:!bg-sidebar-hover
+                    hover:!text-sidebar-text
+            ">
 
-                <mat-icon matListItemIcon>
+                <mat-icon matListItemIcon class="!text-sidebar-text group-hover:!text-white">
                     settings
                 </mat-icon>
 
-                <span matListItemTitle>
+                <span matListItemTitle class="!font-semibold !text-sidebar-text">
                     Configurações
                 </span>
 
@@ -76,18 +205,35 @@
 
         </mat-nav-list>
 
-
         <!-- SAIR -->
-        <div class="absolute bottom-0 left-0 w-full p-3">
 
-            <button mat-button class="!w-full !justify-start !text-red-600">
+        <div class="
+            absolute
+            bottom-0
+            left-0
+            w-full
+            border-t 
+            border-sidebar-border
+            p-3
+        ">
+
+            <button 
+                mat-button 
+                class="
+                !w-full
+                !justify-start
+                !rounded-xl
+                !text-sidebar-muted
+                hover:!bg-sidebar-hover
+                hover:!text-sidebar-text
+            ">
 
                 <mat-icon>
                     logout
                 </mat-icon>
 
                 <span class="ml-2">
-                    Sair
+                    Sair da conta
                 </span>
 
             </button>
@@ -97,14 +243,30 @@
     </mat-sidenav>
 
 
-    <!-- CONTEÚDO -->
-    <mat-sidenav-content>
+    <!-- CONTEÚDO PRINCIPAL -->
+
+    <mat-sidenav-content class="!bg-background">
 
         <!-- HEADER -->
-        <mat-toolbar class="!h-16 !bg-white !border-b !border-slate-200 !shadow-sm !px-3 sm:!px-5 lg:!px-6">
+
+        <mat-toolbar class="
+            !h-16
+            !border-b
+            !border-border
+            !bg-surface
+            !px-3
+            !shadow-none
+            sm:!px-5
+            lg:!px-6
+      ">
 
             <!-- HAMBÚRGUER -->
-            <button mat-icon-button (click)="abrirMenu()" aria-label="Abrir menu" class="!mr-2 xl:!hidden">
+            <button 
+                mat-icon-button 
+                (click)="abrirMenu()" 
+                aria-label="Abrir menu" 
+                class="!mr-2 lg:!hidden !text-text
+            ">
 
                 <mat-icon>
                     menu
@@ -113,18 +275,17 @@
             </button>
 
 
-            <!-- TÍTULO -->
-            <span class="text-lg sm:text-xl lg:text-2xl font-semibold text-slate-900">
-                Meu Plantão
-            </span>
-
-
             <!-- ESPAÇO -->
             <span class="flex-1"></span>
 
 
             <!-- PERFIL -->
-            <a mat-icon-button routerLink="/perfil" matTooltip="Meu perfil" class="!text-slate-600">
+            <a 
+                mat-icon-button 
+                routerLink="/perfil"
+                matTooltip="Meu perfil" 
+                class="!text-text-secondary
+            ">
 
                 <mat-icon>
                     account_circle
@@ -134,11 +295,20 @@
 
         </mat-toolbar>
 
-
         <!-- CONTEÚDO -->
-        <main class="min-h-[calc(100vh-4rem)] bg-slate-100 px-3 py-4 sm:px-5 sm:py-6 lg:px-8 lg:py-8">
 
-            <div class="w-full max-w-[1920px] mx-auto">
+        <main class="
+            min-h-[calc(100vh-4rem)]
+            bg-background
+            px-3
+            py-4
+            sm:px-5
+            sm:py-6
+            lg:px-8
+            lg:py-8
+        ">
+
+            <div class="mx-auto w-full max-w-[1920px]">
 
                 <router-outlet></router-outlet>
 
