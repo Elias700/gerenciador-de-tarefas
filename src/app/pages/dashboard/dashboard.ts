@@ -5,6 +5,7 @@ import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { DashboardHeaderComponent } from './dashboard-header/dashboard-header.component';
+import { DashboardOverviewComponent } from './dashboard-overview/dashboard-overview.component';
 
 @Component({
   selector: 'app-dashboard',
@@ -13,7 +14,8 @@ import { DashboardHeaderComponent } from './dashboard-header/dashboard-header.co
     MatCardModule,
     MatButtonModule,
     MatIconModule,
-    DashboardHeaderComponent
+    DashboardHeaderComponent,
+    DashboardOverviewComponent
 ],
   templateUrl: './dashboard.html',
   styleUrl: './dashboard.css',
