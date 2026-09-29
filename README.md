@@ -1,59 +1,77 @@
-# GerenciadorDeTarefas
+Meu Plantão
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.2.16.
+Uma aplicação web feita sob medida para profissionais de saúde (médicos, enfermeiros, técnicos e demais profissionais) organizarem seus plantões, horários e rotina financeira de forma simples e intuitiva.
 
-## Development server
+Sobre o Projeto
 
-To start a local development server, run:
+Muitos profissionais da saúde enfrentam dificuldades para gerenciar sua rotina de trabalho devido à alta carga horária e à variação de locais e escalas. É comum perder o controle da quantidade exata de plantões realizados, horas trabalhadas e valores a receber.
 
-```bash
-ng serve
-```
+O Meu Plantão foi criado para resolver esse problema. Com uma interface centralizada, o profissional consegue acompanhar todo o seu histórico de escalas, saber exatamente quanto tem a receber e planejar seus próximos compromissos sem complicações.
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+Funcionalidades Principais
 
-## Code scaffolding
+📅 Visão Geral e Próximos Plantões: Acompanhe os plantões agendados para os próximos dias com clareza.
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+🕒 Histórico e Plantões Recentes: Registre e consulte plantões passados, com detalhes de datas e locais.
 
-```bash
-ng generate component component-name
-```
+💰 Controle Financeiro: Visualize o valor total já recebido e os saldos pendentes a receber.
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+⏱️ Gestão de Horas: Acompanhe o total de horas trabalhadas no mês ou período selecionado.
 
-```bash
-ng generate --help
-```
+➕ Cadastro Rápido: Adicione novos plantões informando data, carga horária, valor e local em poucos cliques.
 
-## Building
+Tecnologias Utilizadas
 
-To build the project run:
+Frontend (Em desenvolvimento)
 
-```bash
-ng build
-```
+Framework: Angular (v21)
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+Componentes UI: Angular Material
 
-## Running unit tests
+Estilização: Tailwind CSS
 
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
+Linguagem: TypeScript
 
-```bash
-ng test
-```
+Backend (Planejado / Em breve)
 
-## Running end-to-end tests
+Linguagem/Framework: Java
 
-For end-to-end (e2e) testing, run:
+Banco de Dados: A definir
 
-```bash
-ng e2e
-```
+Como Executar o Frontend Localmente
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+Pré-requisitos
 
-## Additional Resources
+Node.js instalado.
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+Angular CLI instalado globalmente (npm install -g @angular/cli).
+
+Passos
+
+Clone o repositório:
+
+git clone https://github.com/Elias700/meu-plantao.git
+
+
+Acesse a pasta do projeto:
+
+cd meu-plantao
+
+
+Instale as dependências:
+
+npm install
+
+
+Inicie o servidor de desenvolvimento:
+
+ng s
+
+
+Acesse no navegador:
+Navegue até http://localhost:4200/. A aplicação será recarregada automaticamente ao salvar edições nos arquivos de origem.
+
+
+📄 Licença
+
+Este projeto está sob desenvolvimento.
