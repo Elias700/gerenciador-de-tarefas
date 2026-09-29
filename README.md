@@ -1,77 +1,63 @@
-Meu Plantão
+# Meu Plantão
 
-Uma aplicação web feita sob medida para profissionais de saúde (médicos, enfermeiros, técnicos e demais profissionais) organizarem seus plantões, horários e rotina financeira de forma simples e intuitiva.
+> Sistema para gestão de escalas, controle de horas e acompanhamento financeiro de plantões para profissionais de saúde.
 
-Sobre o Projeto
+---
 
-Muitos profissionais da saúde enfrentam dificuldades para gerenciar sua rotina de trabalho devido à alta carga horária e à variação de locais e escalas. É comum perder o controle da quantidade exata de plantões realizados, horas trabalhadas e valores a receber.
+## Sobre o Projeto
 
-O Meu Plantão foi criado para resolver esse problema. Com uma interface centralizada, o profissional consegue acompanhar todo o seu histórico de escalas, saber exatamente quanto tem a receber e planejar seus próximos compromissos sem complicações.
+Profissionais da saúde (médicos, enfermeiros, técnicos, entre outros) frequentemente enfrentam desafios para gerenciar múltiplos vínculos trabalhistas, escalas variáveis e relatórios financeiros. É comum perder o controle de quantas horas foram trabalhadas, quantos plantões foram realizados e quais valores ainda estão pendentes de recebimento.
 
-Funcionalidades Principais
+O **Meu Plantão** foi desenvolvido para solucionar essa dor. Trata-se de uma plataforma centralizada que permite registrar, visualizar e gerenciar todo o histórico de trabalho com clareza, facilitando o planejamento financeiro e a organização da rotina.
 
-📅 Visão Geral e Próximos Plantões: Acompanhe os plantões agendados para os próximos dias com clareza.
+---
 
-🕒 Histórico e Plantões Recentes: Registre e consulte plantões passados, com detalhes de datas e locais.
+## Funcionalidades
 
-💰 Controle Financeiro: Visualize o valor total já recebido e os saldos pendentes a receber.
+- [x] **Visão Geral Dinâmica:** Painel com métricas de horas acumuladas, total a receber e recebidos.
+- [x] **Próximos Plantões:** Acompanhamento das escalas futuras organizadas por data e local.
+- [x] **Histórico de Plantões:** Registro completo e consulta de escalas passadas.
+- [x] **Controle Financeiro:** Resumo claro do faturamento esperado versus faturamento realizado.
+- [x] **Cadastro de Escalas:** Interface simples para inclusão de novos plantões com valor, carga horária e instituição.
 
-⏱️ Gestão de Horas: Acompanhe o total de horas trabalhadas no mês ou período selecionado.
+---
 
-➕ Cadastro Rápido: Adicione novos plantões informando data, carga horária, valor e local em poucos cliques.
+## Tech Stack
 
-Tecnologias Utilizadas
+### **Frontend**
+| Tecnologia | Função |
+| :--- | :--- |
+| **Angular 21** | Framework Web Principal |
+| **Angular Material** | Biblioteca de Componentes UI |
+| **Tailwind CSS** | Framework de Estilização |
+| **TypeScript** | Linguagem Principal |
 
-Frontend (Em desenvolvimento)
+### **Backend & Banco de Dados** *(Em Planejamento)*
+| Tecnologia | Função |
+| :--- | :--- |
+| **Java** | API REST / Regras de Negócio |
+| *A definir* | Persistência de Dados (SGBD) |
 
-Framework: Angular (v21)
+---
 
-Componentes UI: Angular Material
+## Como Executar o Projeto Localmente
 
-Estilização: Tailwind CSS
+### **Pré-requisitos**
+Certifique-se de ter instalado em sua máquina:
+- [Node.js](https://nodejs.org/) (versão LTS)
+- [Angular CLI](https://angular.dev/tools/cli)
 
-Linguagem: TypeScript
+### **Passo a Passo**
 
-Backend (Planejado / Em breve)
-
-Linguagem/Framework: Java
-
-Banco de Dados: A definir
-
-Como Executar o Frontend Localmente
-
-Pré-requisitos
-
-Node.js instalado.
-
-Angular CLI instalado globalmente (npm install -g @angular/cli).
-
-Passos
-
-Clone o repositório:
-
+```bash
+# 1. Clonar o repositório
 git clone https://github.com/Elias700/meu-plantao.git
 
-
-Acesse a pasta do projeto:
-
+# 2. Acessar o diretório do projeto
 cd meu-plantao
 
-
-Instale as dependências:
-
+# 3. Instalar as dependências
 npm install
 
-
-Inicie o servidor de desenvolvimento:
-
-ng s
-
-
-Acesse no navegador:
-Navegue até http://localhost:4200/. A aplicação será recarregada automaticamente ao salvar edições nos arquivos de origem.
-
-
-📄 Licença
-
-Este projeto está sob desenvolvimento.
+# 4. Executar a aplicação
+ng serve
