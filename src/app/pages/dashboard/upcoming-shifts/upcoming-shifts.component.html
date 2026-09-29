@@ -1,1 +1,160 @@
-<p>upcoming-shifts works!</p>
+<section class="mt-4 space-y-4">
+
+  <!-- PRÓXIMOS PLANTÕES -->
+
+  <mat-card 
+    appearance="outlined" 
+    class="
+      !rounded-2xl
+      !border-border
+      !bg-surface
+      !shadow-none
+  ">
+
+    <!-- CABEÇALHO -->
+
+    <div class="
+        flex
+        items-center
+        justify-between
+        border-b
+        border-border
+        px-5
+        py-5
+      ">
+
+      <div>
+
+        <h2 class="text-sm font-semibold text-text">
+          Próximos Plantões
+        </h2>
+
+        <p class="mt-0.5 text-xs text-text-secondary">
+          {{ proximosPlantoes.length }} plantões agendados
+        </p>
+
+      </div>
+
+
+      <button type="button" class="
+          text-xs
+          font-semibold
+          text-primary
+          transition-colors
+          hover:text-primary-dark
+        ">
+        + Adicionar
+      </button>
+
+    </div>
+
+
+    <!-- LISTA -->
+
+    <div>
+
+      @for (plantao of proximosPlantoes; track plantao.dia + plantao.hospital) {
+
+      <div class="
+            flex
+            items-center
+            gap-4
+            border-b
+            border-border
+            px-4
+            py-4
+            last:border-b-0
+            sm:px-5
+        ">
+
+        <!-- DATA -->
+
+        <div class="
+              flex
+              h-12
+              w-12
+              shrink-0
+              flex-col
+              items-center
+              justify-center
+              rounded-xl
+              bg-primary-light
+              text-primary
+          ">
+
+          <span class="text-sm font-bold leading-none">
+            {{ plantao.dia }}
+          </span>
+
+          <span class="mt-0.5 text-[10px] font-medium">
+            {{ plantao.mes }}
+          </span>
+
+        </div>
+
+
+        <!-- INFORMAÇÕES -->
+
+        <div class="min-w-0 flex-1">
+
+          <div class="flex flex-wrap items-center gap-2">
+
+            <p class="truncate text-sm font-semibold text-text">
+              {{ plantao.hospital }}
+            </p>
+
+
+            <!-- TIPO -->
+
+            <span class="
+                  rounded-full
+                  px-2
+                  py-0.5
+                  text-[10px]
+                  font-medium
+                " [class.bg-primary-light]="plantao.tipoClasse === 'diurno'"
+              [class.text-primary]="plantao.tipoClasse === 'diurno'"
+              [class.bg-background]="plantao.tipoClasse === 'noturno'"
+              [class.text-text-secondary]="plantao.tipoClasse === 'noturno'"
+              [class.bg-[#fff4df]]="plantao.tipoClasse === 'integral'"
+              [class.text-warning]="plantao.tipoClasse === 'integral'">
+              {{ plantao.tipo }}
+            </span>
+
+          </div>
+
+
+          <p class="mt-0.5 text-xs text-text-secondary">
+            {{ plantao.setor }}
+            ·
+            {{ plantao.horario }}
+            ·
+            {{ plantao.duracao }}
+          </p>
+
+        </div>
+
+
+        <!-- VALOR -->
+
+        <div class="shrink-0 text-right">
+
+          <p class="text-sm font-semibold text-text">
+            {{ plantao.valor }}
+          </p>
+
+          <p class="mt-0.5 text-[10px] text-text-secondary">
+            {{ plantao.diaSemana }}
+          </p>
+
+        </div>
+
+      </div>
+
+      }
+
+    </div>
+
+  </mat-card>
+
+</section>
