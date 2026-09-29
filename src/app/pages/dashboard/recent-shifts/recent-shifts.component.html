@@ -1,1 +1,140 @@
-<p>recent-shifts works!</p>
+ 
+  <!-- PLANTÕES RECENTES -->
+<section class="mt-4 space-y-4">
+  
+  <mat-card appearance="outlined" class="
+      !rounded-2xl
+      !border-border
+      !bg-surface
+      !shadow-none
+    ">
+
+    <!-- CABEÇALHO -->
+
+    <div class="
+        flex
+        items-center
+        justify-between
+        border-b
+        border-border
+        px-5
+        py-5
+      ">
+
+      <div>
+
+        <h2 class="text-sm font-semibold text-text">
+          Plantões Recentes
+        </h2>
+
+        <p class="mt-0.5 text-xs text-text-secondary">
+          Setembro 2026
+        </p>
+
+      </div>
+
+    </div>
+
+
+    <!-- LISTA -->
+
+    <div>
+
+      @for (plantao of plantoesRecentes; track plantao.hospital + plantao.data) {
+
+      <div class="
+            flex
+            items-center
+            gap-4
+            border-b
+            border-border
+            px-4
+            py-4
+            last:border-b-0
+            sm:px-5
+          ">
+
+        <!-- ÍCONE -->
+
+        <div class="
+              flex
+              h-10
+              w-10
+              shrink-0
+              items-center
+              justify-center
+              rounded-xl
+              bg-background
+              text-text-secondary
+            ">
+
+          <mat-icon class="!text-[20px]">
+            calendar_month
+          </mat-icon>
+
+        </div>
+
+
+        <!-- INFORMAÇÕES -->
+
+        <div class="min-w-0 flex-1">
+
+          <p class="truncate text-sm font-semibold text-text">
+            {{ plantao.hospital }}
+          </p>
+
+          <p class="mt-0.5 text-xs text-text-secondary">
+            {{ plantao.data }}
+            ·
+            {{ plantao.duracao }}
+          </p>
+
+        </div>
+
+
+        <!-- VALOR + STATUS -->
+
+        <div class="shrink-0 text-right">
+
+          <p class="text-sm font-semibold text-text">
+            {{ plantao.valor }}
+          </p>
+
+
+          <span class="
+                mt-1
+                inline-flex
+                items-center
+                rounded-full
+                px-2
+                py-0.5
+                text-[10px]
+                font-medium
+              " [class.bg-primary-light]="plantao.statusClasse === 'recebido'"
+            [class.text-primary]="plantao.statusClasse === 'recebido'"
+            [class.bg-[#fff4df]]="plantao.statusClasse === 'pendente'"
+            [class.text-warning]="plantao.statusClasse === 'pendente'">
+
+            @if (plantao.statusClasse === 'recebido') {
+            ✓
+            }
+
+            @if (plantao.statusClasse === 'pendente') {
+            ⏳
+            }
+
+            {{ plantao.status }}
+
+          </span>
+
+        </div>
+
+      </div>
+
+      }
+
+    </div>
+
+  </mat-card>
+
+</section>
