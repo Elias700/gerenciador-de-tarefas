@@ -1,9 +1,11 @@
 import { Routes } from '@angular/router';
+
 import { Layout } from './layout/layout';
 import { Login } from './pages/login/login';
 import { Dashboard } from './pages/dashboard/dashboard';
 import { Register } from './pages/register/register';
 import { ForgotPassword } from './pages/forgot-password/forgot-password';
+import { AddShift } from './pages/add-shift/add-shift';
 
 export const routes: Routes = [
 
@@ -34,7 +36,11 @@ export const routes: Routes = [
         children: [
             {
                 path: 'dashboard',
-                component: Dashboard
+                component: Dashboard,
+            },
+            {
+                path: 'add-shift', 
+                component: AddShift
             }
         ]
     }
