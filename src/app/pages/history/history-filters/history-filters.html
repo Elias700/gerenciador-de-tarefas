@@ -1,0 +1,64 @@
+<section class="mb-6 rounded-2xl border border-border bg-surface p-4 shadow-sm sm:p-5">
+
+  <!-- BUSCA -->
+  <mat-form-field appearance="outline" subscriptSizing="dynamic" class="w-full">
+    <mat-label>Buscar por hospital ou especialidade</mat-label>
+    <mat-icon matPrefix class="!ml-3 !mr-2">search</mat-icon>
+    <input matInput type="text" [(ngModel)]="busca" placeholder="Digite para buscar..." />
+  </mat-form-field>
+
+  <div class="mt-4 grid grid-cols-1 gap-4 lg:grid-cols-[1fr_auto_420px] lg:items-end">
+
+    <!-- STATUS -->
+    <div>
+      <p class="mb-2 text-xs font-semibold text-text-secondary">Status</p>
+      <div class="flex flex-wrap gap-2">
+        @for (opcao of statusOpcoes; track opcao.valor) {
+          <button
+            type="button"
+            (click)="status.set(opcao.valor)"
+            class="rounded-lg px-4 py-2 text-xs font-semibold transition duration-200 hover:opacity-90"
+            [class]="status() === opcao.valor
+              ? 'bg-primary text-white'
+              : 'bg-background text-text-secondary'">
+            {{ opcao.nome }}
+          </button>
+        }
+      </div>
+    </div>
+
+    <div class="hidden h-10 w-px bg-border lg:block"></div>
+
+    <!-- ANO E MÊS -->
+    <div class="grid grid-cols-2 gap-3">
+      <mat-form-field appearance="outline" subscriptSizing="dynamic">
+        <mat-label>Ano</mat-label>
+        <mat-select [(ngModel)]="ano">
+          @for (a of anos; track a.valor) {
+            <mat-option [value]="a.valor">{{ a.nome }}</mat-option>
+          }
+        </mat-select>
+      </mat-form-field>
+
+      <mat-form-field appearance="outline" subscriptSizing="dynamic">
+        <mat-label>Mês</mat-label>
+        <mat-select [(ngModel)]="mes">
+          @for (m of meses; track m.valor) {
+            <mat-option [value]="m.valor">{{ m.nome }}</mat-option>
+          }
+        </mat-select>
+      </mat-form-field>
+    </div>
+
+  </div>
+
+  @if (temFiltroAtivo()) {
+    <button
+      type="button"
+      (click)="limpar()"
+      class="mt-4 text-xs font-semibold text-primary hover:text-primary-dark">
+      Limpar filtros
+    </button>
+  }
+
+</section>

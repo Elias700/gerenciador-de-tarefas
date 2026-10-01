@@ -1,0 +1,58 @@
+@if (plantoes().length > 0) {
+
+  <section class="overflow-hidden rounded-2xl border border-border bg-surface shadow-sm">
+    @for (p of plantoes(); track p.data + p.hospital + p.mesFiltro) {
+
+      <article
+        class="flex flex-col gap-4 border-b border-border p-4 last:border-b-0
+               sm:flex-row sm:items-center sm:justify-between sm:px-5 sm:py-4">
+
+        <div class="flex min-w-0 items-center gap-3">
+          <div class="flex h-12 w-12 shrink-0 flex-col items-center justify-center rounded-xl bg-background">
+            <span class="text-sm font-semibold text-text">{{ p.data }}</span>
+            <span class="text-xs text-text-secondary">{{ p.mes }}</span>
+          </div>
+
+          <div class="min-w-0">
+            <div class="flex flex-wrap items-center gap-2">
+              <h2 class="text-sm font-semibold text-text sm:text-base">{{ p.hospital }}</h2>
+              <span class="rounded-full bg-primary-light px-2 py-0.5 text-xs font-medium text-primary-dark">
+                {{ p.tipo }}
+              </span>
+            </div>
+            <p class="mt-1 text-xs text-text-secondary sm:text-sm">
+              {{ p.especialidade }} · {{ p.horario }} · {{ p.dia }}
+            </p>
+          </div>
+        </div>
+
+        <div class="flex items-center justify-between gap-4 sm:flex-col sm:items-end sm:gap-1">
+          <span class="text-sm font-semibold text-text sm:text-base">
+            R$ {{ formatarValor(p.valor) }}
+          </span>
+
+          @if (p.status === 'recebido') {
+            <span class="rounded-full bg-primary-light px-2 py-1 text-xs font-medium text-primary">
+              ✓ Recebido
+            </span>
+          } @else {
+            <span class="rounded-full bg-warning/10 px-2 py-1 text-xs font-medium text-warning">
+              ⏳ Pendente
+            </span>
+          }
+        </div>
+
+      </article>
+
+    }
+  </section>
+
+} @else {
+
+  <section class="flex flex-col items-center justify-center rounded-2xl border border-border bg-surface px-6 py-12 text-center shadow-sm">
+    <mat-icon class="!mb-3 !h-10 !w-10 !text-4xl !text-text-secondary">search_off</mat-icon>
+    <h2 class="text-base font-semibold text-text">Nenhum plantão encontrado</h2>
+    <p class="mt-1 text-sm text-text-secondary">Tente ajustar os filtros</p>
+  </section>
+
+}

@@ -1,0 +1,30 @@
+<div class="min-h-full bg-background px-4 py-6 sm:px-6 sm:py-8 lg:px-8">
+  <div class="mx-auto w-full max-w-6xl">
+
+    <header class="mb-6 sm:mb-8">
+      <h1 class="text-2xl font-bold tracking-tight text-text sm:text-3xl">
+        Histórico de Plantões
+      </h1>
+      <p class="mt-1 text-sm text-text-secondary sm:text-base">
+        {{ plantaoes.length }} registros encontrados
+      </p>
+    </header>
+
+    <app-history-summary
+      [totalRecebido]="totalRecebido"
+      [totalPendente]="totalPendente"
+      [totalHoras]="totalHoras" />
+
+    <app-history-filters
+      [(busca)]="busca"
+      [(status)]="filtroStatus"
+      [(ano)]="filtroAno"
+      [(mes)]="filtroMes"
+      [temFiltroAtivo]="existeFiltroAtivo" />
+
+    @if (existeFiltroAtivo) {
+      <app-history-list [plantoes]="plantaoesFiltrados" />
+    }
+
+  </div>
+</div>
