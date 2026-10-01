@@ -6,6 +6,7 @@ import { Dashboard } from './pages/dashboard/dashboard';
 import { Register } from './pages/register/register';
 import { ForgotPassword } from './pages/forgot-password/forgot-password';
 import { AddShift } from './pages/add-shift/add-shift';
+import { History } from './pages/history/history';
 
 export const routes: Routes = [
 
@@ -41,6 +42,10 @@ export const routes: Routes = [
             {
                 path: 'add-shift', 
                 component: AddShift
+            },
+            {
+                path: 'history',
+                component: History
             }
         ]
     }
