@@ -1,0 +1,60 @@
+<div class="
+    rounded-2xl
+    border
+    border-border
+    bg-surface
+    p-2
+  ">
+
+    <nav class="
+      flex
+      flex-col
+      gap-1
+    " aria-label="Menu de configurações
+    ">
+
+        @for (opcao of opcoes; track opcao.nome) {
+
+        <button 
+            type="button" 
+            (click)="selecionarOpcao(opcao.nome)" 
+            class="
+                flex
+                w-full
+                items-center
+                gap-3
+                rounded-lg
+                px-3
+                py-2.5
+                text-left
+                text-sm
+                font-medium
+                transition
+                duration-200
+                cursor-pointer
+            " 
+            [class.bg-primary]="opcao.ativo" [class.text-white]="opcao.ativo"
+            [class.text-text-secondary]="!opcao.ativo" [class.hover:bg-background]="!opcao.ativo"
+            [class.hover:text-text]="!opcao.ativo
+        ">
+
+            <mat-icon 
+                class="
+                !h-5
+                !w-5
+                !text-[20px]
+            ">
+                {{ opcao.icone }}
+            </mat-icon>
+
+            <span>
+                {{ opcao.nome }}
+            </span>
+
+        </button>
+
+        }
+
+    </nav>
+
+</div>

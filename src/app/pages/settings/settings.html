@@ -1,5 +1,4 @@
-<div
-  class="
+<div class="
     min-h-full
     bg-background
     px-4
@@ -7,173 +6,136 @@
     sm:px-6
     sm:py-8
     lg:px-8
-  "
->
+  ">
 
-  <div class="mx-auto w-full max-w-5xl">
+    <div class="mx-auto w-full max-w-5xl">
 
-    <!-- ================================================= -->
-    <!-- CABEÇALHO -->
-    <!-- ================================================= -->
+        <header class="mb-6 sm:mb-8">
 
-    <header class="mb-6 sm:mb-8">
+            <h1 class="
+                text-2xl
+                font-bold
+                tracking-tight
+                text-text
+                sm:text-3xl
+            ">
+                Configurações
+            </h1>
 
-      <h1
-        class="
-          text-2xl
-          font-bold
-          tracking-tight
-          text-text
-          sm:text-3xl
-        "
-      >
-        Configurações
-      </h1>
+            <p class="
+                mt-1
+                text-sm
+                text-text-secondary
+                sm:text-base
+            ">
+                Gerencie sua conta e preferências
+            </p>
 
-      <p
-        class="
-          mt-1
-          text-sm
-          text-text-secondary
-          sm:text-base
-        "
-      >
-        Gerencie sua conta e preferências
-      </p>
-
-    </header>
+        </header>
 
 
-    <!-- ================================================= -->
-    <!-- CARD DO PROFISSIONAL -->
-    <!-- ================================================= -->
+        <!-- CARD DO PROFISSIONAL -->
 
-    <section
-      class="
-        overflow-hidden
-        rounded-2xl
-        bg-sidebar
-        p-5
-        shadow-sm
-        sm:p-6
-      "
-    >
+        <section class="
+            overflow-hidden
+            rounded-2xl
+            bg-sidebar
+            p-5
+            shadow-sm
+            sm:p-6
+        ">
 
-      <div
-        class="
-          flex
-          items-center
-          gap-4
-        "
-      >
+            <div class="
+                flex
+                items-center
+                gap-4
+            ">
 
-        <!-- ============================================= -->
-        <!-- AVATAR -->
-        <!-- ============================================= -->
+                <!-- AVATAR -->
 
-        <div
-          class="
-            flex
-            h-14
-            w-14
-            shrink-0
-            items-center
-            justify-center
-            rounded-xl
-            bg-primary
-            text-base
-            font-bold
-            text-white
-            sm:h-16
-            sm:w-16
-            sm:text-lg
-          "
-        >
-          {{ profissional.iniciais }}
-        </div>
+                <div class="
+                    flex
+                    h-14
+                    w-14
+                    shrink-0
+                    items-center
+                    justify-center
+                    rounded-xl
+                    bg-primary
+                    text-base
+                    font-bold
+                    text-white
+                    sm:h-16
+                    sm:w-16
+                    sm:text-lg
+                ">
+                    {{ profissional.iniciais }}
+                </div>
 
 
-        <!-- ============================================= -->
-        <!-- DADOS DO PROFISSIONAL -->
-        <!-- ============================================= -->
+                <!-- DADOS DO PROFISSIONAL -->
 
-        <div class="min-w-0">
+                <div class="min-w-0">
 
-          <h2
-            class="
-              truncate
-              text-base
-              font-semibold
-              text-sidebar-text
-              sm:text-lg
-            "
-          >
-            {{ profissional.nome }}
-          </h2>
+                    <h2 class="
+                        truncate
+                        text-base
+                        font-semibold
+                        text-sidebar-text
+                        sm:text-lg
+                    ">
+                        {{ profissional.nome }}
+                    </h2>
+
+                    <p class="
+                        mt-0.5
+                        text-xs
+                        text-sidebar-muted
+                        sm:text-sm
+                    ">
+                        {{ profissional.profissao }}
+                        ·
+                        {{ profissional.crm }}
+                    </p>
+
+                    <p class="
+                        mt-1
+                        truncate
+                        text-xs
+                        text-sidebar-muted
+                        sm:text-sm
+                    ">
+                        {{ profissional.email }}
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
 
 
-          <p
-            class="
-              mt-0.5
-              text-xs
-              text-sidebar-muted
-              sm:text-sm
-            "
-          >
-            {{ profissional.profissao }}
-            ·
-            {{ profissional.crm }}
-          </p>
+        <!-- ÁREA DE CONFIGURAÇÕES -->
 
+        <div class="
+            mt-6
+            grid
+            grid-cols-1
+            gap-5
+            lg:grid-cols-[180px_1fr]
+        ">
 
-          <p
-            class="
-              mt-1
-              truncate
-              text-xs
-              text-sidebar-muted
-              sm:text-sm
-            "
-          >
-            {{ profissional.email }}
-          </p>
+            <app-settings-menu />
+
+            <!-- CONTEÚDO -->
+
+            <div>
+                <!-- Profile, Financial, Notifications e Security
+             serão adicionados aqui posteriormente -->
+            </div>
 
         </div>
 
-      </div>
-
-    </section>
-
-  </div>
+    </div>
 
 </div>
-
-
-
-<!-- 
-    settings/
-        │       ├── settings.ts
-        │       ├── settings.html
-        │       ├── settings.css
-        │       │
-        │       ├── profile/
-        │       │   ├── profile.ts
-        │       │   ├── profile.html
-        │       │   └── profile.css
-        │       │
-        │       ├── financial/
-        │       │   ├── financial.ts
-        │       │   ├── financial.html
-        │       │   └── financial.css
-        │       │
-        │       ├── notifications/
-        │       │   ├── notifications.ts
-        │       │   ├── notifications.html
-        │       │   └── notifications.css
-        │       │
-        │       └── security/
-        │           ├── security.ts
-        │           ├── security.html
-        │           └── security.css 
-    
--->
