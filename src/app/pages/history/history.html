@@ -13,14 +13,16 @@
     <app-history-summary
       [totalRecebido]="totalRecebido"
       [totalPendente]="totalPendente"
-      [totalHoras]="totalHoras" />
+      [totalHoras]="totalHoras" 
+    />
 
     <app-history-filters
       [(busca)]="busca"
       [(status)]="filtroStatus"
       [(ano)]="filtroAno"
       [(mes)]="filtroMes"
-      [temFiltroAtivo]="existeFiltroAtivo" />
+      [temFiltroAtivo]="existeFiltroAtivo" 
+    />
 
     @if (existeFiltroAtivo) {
       <app-history-list [plantoes]="plantaoesFiltrados" />

@@ -2,17 +2,23 @@
 
   <div class="rounded-2xl border border-border bg-surface p-5 shadow-sm">
     <p class="text-sm text-text-secondary">Total recebido</p>
-    <p class="mt-2 text-xl font-semibold text-text">R$ {{ formatarValor(totalRecebido()) }}</p>
+    <p class="mt-2 text-xl font-semibold text-text">
+      R$ {{ formatarValor(totalRecebido()) }}
+    </p>
   </div>
 
   <div class="rounded-2xl border border-border bg-surface p-5 shadow-sm">
     <p class="text-sm text-text-secondary">A receber</p>
-    <p class="mt-2 text-xl font-semibold text-warning">R$ {{ formatarValor(totalPendente()) }}</p>
+    <p class="mt-2 text-xl font-semibold text-warning">
+      R$ {{ formatarValor(totalPendente()) }}
+    </p>
   </div>
 
   <div class="rounded-2xl border border-border bg-surface p-5 shadow-sm sm:col-span-2 lg:col-span-1">
     <p class="text-sm text-text-secondary">Horas totais</p>
-    <p class="mt-2 text-xl font-semibold text-text">{{ totalHoras() }}h</p>
+    <p class="mt-2 text-xl font-semibold text-text">
+      {{ totalHoras() }}h
+    </p>
   </div>
 
 </section>
