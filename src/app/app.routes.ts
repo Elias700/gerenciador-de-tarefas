@@ -7,6 +7,7 @@ import { Register } from './pages/register/register';
 import { ForgotPassword } from './pages/forgot-password/forgot-password';
 import { AddShift } from './pages/add-shift/add-shift';
 import { History } from './pages/history/history';
+import { Settings } from './pages/settings/settings';
 
 export const routes: Routes = [
 
@@ -46,6 +47,10 @@ export const routes: Routes = [
             {
                 path: 'history',
                 component: History
+            },
+            {
+                path: 'settings',
+                component: Settings
             }
         ]
     }
